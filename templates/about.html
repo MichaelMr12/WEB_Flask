@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    О КВАНТУМЕ
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-5" align="center">
+    <h1>Контакты</h1>
+        <h3><a href="https://t.me/vk_post_news_21_bot">Ссылка на телеграмм бота </a></h3>
+                  <p><a href="tel:84832770129">8-4832-77-01-29</a></p>
+                  <p>241012, Россия, Брянск, ул.Димитрова 114</p>
+                  <p><a href="mailto:info@kvantorium32.ru">info@kvantorium32.ru</a></p>
+
+       <div class="col-md-4">
+        <a href="https://vk.com/kvantorium32"> <img  src="{{ url_for("static", filename="/img/vk.png") }}"
+                                     style="width: 100px; height: 100px; padding: 10px;"> </a>
+</div>
+
+
+{% endblock %}

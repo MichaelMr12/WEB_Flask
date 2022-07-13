@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    О КВАНТУМЕ
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="card-title pricing-card-title"><small class="text-muted">О КВАНТУМЕ  </small>IT </h1>
+            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-left">
+                <p class="lead">Информационные технологии призваны, основываясь и рационально используя современные
+                    достижения в области компьютерной техники и иных высоких технологий, новейших средств коммуникации,
+                    программного обеспечения и практического опыта, решать задачи по эффективной организации
+                    информационного
+                    процесса.</p>
+            </div>
+
+            <div class="card-deck mb-3 text-center">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bolder">Информация о направлении</h4>
+                    </div>
+                    <div class="card-body">
+
+                        <p>IT-квантум — это часть кванториума, деятельность которой направлена на автоматизацию,
+                            разработку умных устройств и интернет вещей (IoT). Учебный курс ITквантума рассчитан на 2
+                            года и состоит из вводного и углубленного модулей и проектной работы. Дети принимают участие
+                            в соревнованиях, олимпиадах, конференциях и летних образовательных
+                        </p>
+
+                        <a href="/pass" class="btn btn-lg btn btn-info" target="_blank">Подробнее</a>
+                    </div>
+                </div>
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bolder">Образовательные модули</h4>
+                    </div>
+                    <div class="card-body">
+
+                        <h5>Вводный модуль</h5>
+                        <p>Содержит 3 кейса по тематике автоматизации и создания умных вещей.</p>
+
+                        <h5>Углубленный модуль</h5>
+                        <p>Модуль содержит содержит тематические блоки о автоматизации, интернете вещей, разработке
+                            устройств на современных микропроцессорных системах, сетевых технологиях.</p>
+
+                        <h5>Проектный год</h5>
+                        <p>Разработка проекта по использованию автоматизации в отраслях и сферах деятельности</p>
+                        <a href="/pass" class="btn btn-lg btn btn-info" target="_blank">Подробнее</a>
+                    </div>
+                </div>
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bolder">Фотогалерея</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class
+                        "container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img class="mb-2" src="{{ url_for("static", filename="/img/foto/1.jpg") }}"
+                                     style="width: 100%; height: 100%; padding: 10px;">
+                            </div>
+                            <div class="col-md-4">
+                                <img class="mb-2" src="{{ url_for("static", filename="/img/foto/2.jpg") }}"
+                                     style="width: 100%; height: 100%; padding: 10px;">
+                            </div>
+                            <div class="col-md-4">
+                                <img class="mb-2" src="{{ url_for("static", filename="/img/foto/3.jpg") }}"
+                                     style="width: 100%; height: 100%; padding: 10px;">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img class="mb-2" src="{{ url_for("static", filename="/img/foto/4.jpg") }}"
+                                     style="width: 100%; height: 100%; padding: 10px;">
+                            </div>
+                            <div class="col-md-4">
+                                <img class="mb-2" src="{{ url_for("static", filename="/img/foto/5.jpg") }}"
+                                     style="width: 100%; height: 100%; padding: 10px;">
+                            </div>
+                            <div class="col-md-4">
+                                <img class="mb-2" src="{{ url_for("static", filename="/img/foto/6.jpg") }}"
+                                     style="width: 100%; height: 100%; padding: 10px;">
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/pass" class="btn btn-lg btn btn-info" target="_blank">Поближе</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

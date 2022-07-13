@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Подписки пользователей бота на группы в контакте
+
+{% endblock %}
+
+{% block body %}
+    <h1>Подписки пользователей бота на группы в контакте</h1>
+    {% for el in subs %}
+    <div class="contaner mt-5">
+        <div class="alert alert-info">
+            <h2> Фамилия: {% print(el[3]) %} </h2>
+            <h2> Имя: {% print(el[2]) %} </h2>
+            <p>Дата: {{ el[5] }} </p>
+            <p> <b>Название группы в контакте: {{ el[6] }} </b></p>
+
+
+        </div>
+    {% endfor %}
+
+
+    </div>
+
+
+{% endblock %}
