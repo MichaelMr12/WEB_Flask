@@ -6,7 +6,7 @@ import os
 VK_TOKEN = None
 # with open("vkbot/tokenvk.txt") as f:
 #     VK_TOKEN = f.read().strip()
-
+#переменная среды
 VK_TOKEN = os.environ["VK_TOKEN"]
 
 # vk session init

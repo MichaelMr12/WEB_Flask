@@ -10,7 +10,7 @@ import os
 TG_TOKEN = None
 # with open("vkbot/tokentg.txt") as f:
 #     TG_TOKEN = f.read().strip()
-
+#переменная среды
 TG_TOKEN = os.environ["TG_TOKEN"]
 
 

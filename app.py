@@ -6,7 +6,7 @@ app = Flask(__name__ )
 
 
 
-
+# гл стр
 @app.route('/')
 @app.route('/home')
 def index():
