@@ -28,7 +28,7 @@ def bd_record(id, id_first, id_last, group_id, now, group_name):
         conn.commit()
     return 'Группа ' + group_name + ' добавлена в базу данных'
 
-
+#xcv
 def bd_read(id):
     conn = sqlite3.connect('bd_vk_post.db')
     cur = conn.cursor()
