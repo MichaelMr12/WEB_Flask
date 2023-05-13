@@ -3,4 +3,6 @@
 /vkbot/tokentg.txt
 /.idea
 /venv
+/__pycache__/
+
 
