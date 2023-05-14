@@ -5,17 +5,15 @@ import sqlite3
 import datetime as dt
 from Vk import search_group
 import asyncio
-import os
 
-TG_TOKEN = None
-# with open("vkbot/tokentg.txt") as f:
-#     TG_TOKEN = f.read().strip()
-#переменная среды
-TG_TOKEN = os.environ["TG_TOKEN"]
+from config import load_BOT
+from app import app
+
+TG_TOKEN = load_BOT()
 
 
 def bd_record(id, id_first, id_last, group_id, now, group_name):
-    conn = sqlite3.connect('bd_vk_post.db')
+    conn = sqlite3.connect(app.config['DATABASE'])
     cur = conn.cursor()
     print(f"SELECT * FROM users WHERE id_group =={group_id};")
     cur.execute(f"SELECT * FROM users WHERE id_group =={group_id};")
@@ -28,9 +26,10 @@ def bd_record(id, id_first, id_last, group_id, now, group_name):
         conn.commit()
     return 'Группа ' + group_name + ' добавлена в базу данных'
 
-#xcv
+
+# xcv
 def bd_read(id):
-    conn = sqlite3.connect('bd_vk_post.db')
+    conn = sqlite3.connect(app.config['DATABASE'])
     cur = conn.cursor()
     cur.execute(f"SELECT sub_date, name_group, id_group FROM users WHERE id == {id};")
     result = cur.fetchall()
@@ -77,7 +76,7 @@ async def process_callback_btn_help(callback_query: types.CallbackQuery):
 # answer for bd
 @dp.callback_query_handler(text='btn_all_user')
 async def process_callback_btn_all_user(callback_query: types.CallbackQuery):
-    conn = sqlite3.connect('bd_vk_post.db')
+    conn = sqlite3.connect(app.config['DATABASE'])
     cur = conn.cursor()
     cur.execute(f"SELECT DISTINCT id, first, last FROM users")
     result = cur.fetchall()

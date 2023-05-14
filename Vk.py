@@ -1,13 +1,8 @@
 import vk_api
 import os
-#from tokens import VK_TOKEN
+from config import load_VK
 
-
-VK_TOKEN = None
-# with open("vkbot/tokenvk.txt") as f:
-#     VK_TOKEN = f.read().strip()
-#переменная среды
-VK_TOKEN = os.environ["VK_TOKEN"]
+VK_TOKEN = load_VK()
 
 # vk session init
 vk_session = vk_api.VkApi(token=VK_TOKEN)
@@ -38,17 +33,3 @@ def get_post(owner_id):
     except:
         print(owner_id, '--*ERROR*')
         return None
-   
-
-
-   
-    
-    
-        
-
-
-
-
-
-
-    
