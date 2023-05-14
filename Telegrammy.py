@@ -9,7 +9,7 @@ import asyncio
 from config import load_BOT
 from app import app
 
-TG_TOKEN = load_BOT()
+TG_TOKEN = load_BOT(app.root_path)
 
 
 def bd_record(id, id_first, id_last, group_id, now, group_name):

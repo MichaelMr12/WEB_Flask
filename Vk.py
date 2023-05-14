@@ -1,8 +1,10 @@
 import vk_api
 import os
+
+from app import app
 from config import load_VK
 
-VK_TOKEN = load_VK()
+VK_TOKEN = load_VK(app.root_path)
 
 # vk session init
 vk_session = vk_api.VkApi(token=VK_TOKEN)
