@@ -9,9 +9,12 @@ class Config:
 
 def load_VK(path: str | None = None) -> Config:
     env = Env()
-    env.read_env(path)
+    env.read_env(os.path.join(path,'.env'))
+    print(os.path.join(path,'.env'))
+    print(env('VK_TOKEN'))
+
     return env('VK_TOKEN')
 def load_BOT(path: str | None = None) -> Config:
     env = Env()
-    env.read_env(path)
+    env.read_env(os.path.join(path,'.env'))
     return env('BOT_TOKEN')
