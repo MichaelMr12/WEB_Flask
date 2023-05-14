@@ -42,8 +42,8 @@ def bd_read(id):
 # bot init
 PROXY_URL = "http://167.235.144.131:8080"
 
-bot = Bot(proxy=PROXY_URL, token=TG_TOKEN)
-
+#bot = Bot(proxy=PROXY_URL, token=TG_TOKEN)
+bot = Bot(token=TG_TOKEN)
 dp = Dispatcher(bot)
 
 btn_search = InlineKeyboardButton('Начать поиск!😁', callback_data='btn_search')
