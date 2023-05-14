@@ -11,11 +11,6 @@ class Config:
 def load_VK(path: str | None = None) -> Config:
     env = Env()
     env.read_env(os.path.join(path, '.env'))
-    print('7777', os.path.join(path, '.env'))
-    print('0000000')
-    print('8888', env('VK_TOKEN'))
-    print('22222222')
-
     return env('VK_TOKEN')
 
 
